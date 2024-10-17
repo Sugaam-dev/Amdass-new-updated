@@ -1,0 +1,78 @@
+/* Navbarr.css */
+
+/* Default styles for email and home links */
+.email-link,
+.home-link {
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff; /* White color */
+  /* display: flex; */
+  align-items: center;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.home-link:hover{
+    color: #ffffff;
+}
+.me{
+    display: none;
+
+   }
+/* Hover effect for home link */
+
+
+/* Media Query for smaller screens (e.g., max-width: 600px) */
+@media (max-width: 700px) {
+  .email-link,
+  .home-link {
+    color: #0e0d0d; /* Change to deep orange on smaller screens */
+    font-size: 18px; /* Optional: adjust font size */
+  }
+
+  /* Optional: Adjust hover effect on smaller screens */
+
+}
+
+
+/* Navbarr.css */
+
+/* Default styles for navbar-toggler and navbar-toggler-icon */
+.navbar-toggler {
+    border-color: #ffffff; 
+  }
+  
+  .navbar-toggler-icon {
+    background-image: none; /* Remove the default background image */
+  }
+  
+  /* Create a custom hamburger icon using pseudo-elements */
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after,
+  .navbar-toggler-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff; /* Default icon color (white) */
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+  }
+ 
+  
+  /* Media Query for Smaller Screens */
+  @media (max-width: 600px) {
+    .navbar-toggler {
+      border-color: #ff5722; /* Change border color on small screens */
+    background-color: #ffffff3f;
+    }
+    #me{
+        color: #ffffff;
+        font-size:40px ;
+      }
+  
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after,
+    .navbar-toggler-icon span {
+      background-color: #ff5722; /* Change icon color on small screens */
+    }
+  }
+

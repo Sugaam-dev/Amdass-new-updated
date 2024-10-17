@@ -1,0 +1,110 @@
+/* forget.css */
+
+.forget-container {
+    display: flex;
+    height: 100%;
+  }
+  
+  .forget-left {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #D7B067 0%, #FFFFFF 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  
+  .rightLogo img {
+    height: 150px;
+    width: 150px;
+  }
+  
+  .rightLogo {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .introf {
+    background-image: url('../img/forgot1.jpg'); /* Update with your image path */
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 0px 50px 50px 0px;
+  }
+  
+  .introf p {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 30px;
+    height: 50vh;
+  }
+  
+  .forget-right {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Poppins, sans-serif;
+  }
+  
+  .forget-right h2 {
+    color: #000;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 30px;
+  }
+  
+  .forget-right h2 span {
+    color: #FE5005;
+    font-size: 40px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    color: #fff;
+    background-color: #fc5b15ec;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 9999px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    font-family: Poppins, sans-serif;
+    margin-right: 5px;
+  }
+  
+  .but {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .but button {
+    width: 200px;
+  }
+  
+  @media (max-width: 768px) {
+    .forget-container {
+      flex-direction: column-reverse;
+    }
+    .forget-left{
+      flex: none;
+    }
+    .forget-container{
+      flex: none;
+    }
+   
+  }
+  

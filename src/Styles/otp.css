@@ -1,0 +1,199 @@
+/* src/Styles/otp.css */
+
+/* Container Styles */
+.otp-container {
+  display: flex;
+  height: 100%;
+}
+
+/* Left Side Styles */
+.otp-left {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #D7B067 0%, #FFFFFF 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+/* Intro Section with AutoTyping */
+.introo {
+  background-image: url('../img/otp.jpg'); /* Update with your image path */
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  border-radius: 0px 50px 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introo p {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  word-wrap: break-word;
+  max-width: 90%;
+  margin: 0;
+  height: 50vh;
+}
+
+/* Right Side Styles */
+.otp-right {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.rightLogo img {
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.otp-right h2 {
+  color: #000;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.otp-right h2 span {
+  color: #FE5005;
+  font-size: 40px; 
+}
+
+/* OTP Content Styles */
+.otp-content {
+  margin-top: 20px;
+}
+
+.otp-info, .otp-subinfo {
+  font-size: 18px;
+  color: #000;
+}
+
+.otp-info strong, .otp-subinfo strong {
+  color: #f7bf84;
+}
+
+/* Error and Success Messages */
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+/* OTP Inputs Styling */
+.otp-inputs {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+
+.otp-input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.otp-input:focus {
+  border-color: #FE5005;
+}
+
+/* Buttons Styling */
+.otp-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.submit-btn {
+  background-color: #fc5b15ec;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 9999px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #000;
+}
+
+.resend-btn {
+  background-color: transparent;
+  border: none;
+  color: #fc5b15ec;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.resend-btn:hover:not(:disabled) {
+  background-color: #fc5b15ec;
+  color: #fff;
+}
+
+.resend-btn:disabled {
+  color: #000;
+  cursor: not-allowed;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #e04d0e;
+}
+
+/* Responsive Design */
+@media (max-width:768px) {
+  .otp-container {
+    flex-direction: column-reverse;
+  }
+  .otp-left{
+    flex: none;
+  }
+
+  .otp-inputs {
+    justify-content: center;
+  }
+
+  .submit-btn, .resend-btn {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .otp-right h2 span {
+    font-size: 30px;
+  }
+
+  .otp-input {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,351 @@
+/* menu.css */
+
+/* Root Variables for Consistent Styling */
+:root {
+  --primary-color: #3498db; /* Blue */
+  --secondary-color: #2ecc71; /* Green */
+  --accent-color: #e74c3c; /* Red */
+  --background-color: #f4f6f8; /* Light Gray */
+  --text-color: #333333; /* Dark Gray */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  background-image: url('../img/WhatsApp\ Image\ 2024-09-28\ at\ 5.54.20\ PM.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Scrolling Text Container */
+.scrolling-text-container {
+  /* background-color: rgba(80, 80, 163, 0.492); */
+  color: #ffffff;
+  padding: 20px 0;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+}
+@media (max-width:450px) {
+  .scrolling-text-container{
+    margin-top: 70px;
+  }
+}
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 15s linear infinite;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* OTP Card Styles */
+.otp-card {
+  background-color: #ffffff;
+  border-left: 5px solid #FE5005;
+  padding: 45px;
+  margin: 30px auto;
+  max-width: 500px;
+  height: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+}
+
+.otp-details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.del-icon button{
+  color: #c0392b;
+  font-size: 30px;
+  float: right;
+  border: transparent;
+}
+
+.del-icon button:hover{
+  background: transparent;
+  transform: scale(1.5);
+}
+
+.otp-item {
+  flex: 1 1 45%;
+  margin: 10px 0;
+}
+
+.otp-label {
+  font-weight: 600;
+  color:#FE5005;
+  font-family:"karlie";
+  /* font-style: italic; */
+  font-size: 40px;
+}
+
+.otp-value {
+  margin-top: 5px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+#vv{
+  font-size: 60px;
+    font-weight: 700;
+}
+
+/* Menu Container */
+.menu-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* Base Styles for Filter Buttons */
+.filter-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffffff;
+  color: var(--text-color);
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 
+    background-color var(--transition-speed), 
+    color var(--transition-speed), 
+    transform var(--transition-speed),
+    box-shadow var(--transition-speed);
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+.filter-btn:hover:not(:disabled)::after {
+  left: 0;
+}
+
+.filter-btn > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Active States */
+.active-veg {
+  background-color: #2ecc71; /* Green */
+  color: #ffffff;
+}
+
+.active-egg {
+  background-color: #f1c40f; /* Yellow */
+  color: #ffffff;
+}
+
+.active-nonveg {
+  background-color: #e74c3c; /* Red */
+  color: #ffffff;
+}
+
+/* Hover States for Non-Active Buttons */
+.filter-btn:not(.active-veg):not(.active-egg):not(.active-nonveg):hover:not(:disabled) {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Disabled State */
+.filter-buttons button:disabled {
+  background-color: #dddddd;
+  color: #888888;
+  cursor: not-allowed;
+}
+
+/* Menu List */
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.menu-item-card {
+  background-color:  #e6e6fa;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  text-align: center;
+    align-items: center;
+    padding-bottom: 0px;
+}
+
+.menu-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Disabled Card (if needed) */
+.disabled-card {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.item-name {
+  font-size: 25px;
+  color:#000;
+  margin-bottom: 10px;
+  font-family: "junction";
+  font-weight: 600;
+}
+
+.item-category {
+  font-size: 1em;
+  color: #8a8888;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* No Items Found */
+.no-items-found {
+  text-align: center;
+  color: #777777;
+  font-size: 1.2em;
+}
+
+/* Generate OTP Section */
+.generate-otp-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.generate-otp-btn {
+  padding: 12px 30px;
+  font-size: 1.1em;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.generate-otp-btn:hover:not(:disabled) {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.generate-otp-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Order Response */
+.order-response {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e8f8f5;
+  color: #16a085;
+  border: 1px solid #16a085;
+  border-radius: var(--border-radius);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Error Message */
+.error-message {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fdecea;
+  color: #c0392b;
+  border: 1px solid #c0392b;
+  border-radius: var(--border-radius);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filter-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-buttons button {
+    width: 80%;
+  }
+
+  .otp-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .otp-item {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-title {
+    font-size: 1.5em;
+  }
+
+  .item-name {
+    font-size: 1.2em;
+  }
+
+  .generate-otp-btn {
+    width: 100%;
+    padding: 12px 0;
+  }
+}
+
+
+.disab {
+ 
+  display: none;
+}

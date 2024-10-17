@@ -1,0 +1,93 @@
+/* src/Styles/done.css */
+
+/* Container Styling */
+.done-container {
+    display: flex;
+    height: 100%; /* Full viewport height */
+  }
+  
+  /* Left Side Styling */
+  .done-left {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #D7B067 0%, #FFFFFF 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Done Content Styling */
+  .done-content {
+    text-align: center;
+  }
+  
+  .icon-text h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #f7bf84;
+  }
+  
+  .login-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #f7bf84;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .login-link:hover {
+    background-color: #e0a56f;
+    color: white;
+  }
+  
+  /* Right Side Styling */
+  .done-right {
+    flex: 1;
+    padding: 2rem 1.5rem;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .rightLogo img {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .done-right h2 {
+    color: #000;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .done-right h2 span {
+    color: #FE5005;
+    font-size: 40px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width:768px) {
+    .done-container {
+      flex-direction: column;
+    }
+  
+    .done-right h2 {
+      font-size: 24px;
+    }
+  
+    .done-right h2 span {
+      font-size: 30px;
+    }
+  }
+  

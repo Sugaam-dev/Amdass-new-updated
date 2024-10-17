@@ -1,0 +1,132 @@
+/* src/Styles/cnf.css */
+
+.cnf-container {
+  display: flex;
+  height: 100%; /* Ensure it takes the full viewport height */
+}
+
+.cnf-left {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #D7B067 0%, #FFFFFF 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.cnf-intro {
+  background-image: url('../img/cnfpwd.jpg'); /* Update with your image path */
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  border-radius: 0px 50px 50px 0px;
+}
+
+.cnf-intro p {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  /* margin-top: 30px; */
+}
+
+.cnf-right {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cnf-rightLogo img {
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.cnf-right h2 {
+  color: #000;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.cnf-right h2 span {
+  color: #FE5005;
+  font-size: 40px;
+}
+
+.cnf-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.cnf-textfield {
+  width: 100%;
+}
+
+.cnf-error {
+  color: red;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.cnf-btn {
+  color: #fff;
+  background-color: #fc5b15ec;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 9999px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  width: 200px;
+}
+
+.cnf-but {
+  display: flex;
+  justify-content: center; /* Center the button */
+}
+
+.cnf-btn:hover {
+  background-color: #e04e14ec; /* Darken on hover */
+}
+
+@media (max-width: 768px) {
+  .cnf-container {
+    flex-direction: column-reverse;
+  }
+
+  .cnf-intro {
+    border-radius: 0px;
+    height: 200px; /* Adjust as needed for mobile */
+  }
+
+  .cnf-rightLogo img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .cnf-right h2 {
+    font-size: 24px;
+  }
+
+  .cnf-right h2 span {
+    font-size: 32px;
+  }
+
+  .cnf-btn {
+    width: 100%;
+  }
+  .cnf-left{
+    flex-direction: column-reverse;
+  }
+}

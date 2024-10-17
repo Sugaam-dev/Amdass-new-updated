@@ -1,0 +1,306 @@
+/* Header.css */
+
+/* Define CSS variables */
+:root {
+    --clr-black: #000;
+    --clr-white: #fff;
+    --clr-gold: gold;
+  }
+  
+  /* Navbar Styles */
+  nav {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background: black; /* Navbar background color */
+    z-index: 200;
+    margin-top: 50px; /* Space above the navbar */
+  }
+  
+  nav .navbar {
+    display: flex;
+    height: 100%;
+    max-width: 1700px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    color: #fff;
+    position: relative;
+  }
+  
+  /* Logo Styling */
+  nav .navbar .logo {
+    color: var(--clr-black);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  nav .navbar .logo img {
+    max-width: 100%;
+    max-height: 50px; /* Adjusted to constrain logo size */
+    height: auto;
+    display: block;
+    margin: 0;
+    border-radius: 55%;
+  }
+  
+  /* Menu Icon Styling */
+  .menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 1.8rem; /* Adjust size as needed */
+    cursor: pointer;
+    color: var(--clr-white);
+  }
+  
+  /* Navigation Links */
+  nav .navbar .nav-links {
+    height: 100%;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    transition: left 0.3s ease-in;
+  }
+  
+  nav .navbar .nav-links.active {
+    /* For small screens, the 'active' class shifts the menu into view */
+    left: 0;
+  }
+  
+  /* Menus */
+  nav .navbar .nav-links .menus {
+    display: flex;
+  }
+  
+  nav .navbar .nav-links .menus li {
+    display: flex;
+    position: relative;
+    align-items: center;
+    list-style: none;
+    padding: 0 10px;
+  }
+  
+  nav .navbar .nav-links .menus li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--clr-white);
+    white-space: nowrap;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: medium;
+    margin-top: 15px;
+  }
+  
+  /* Animation for menu items */
+  nav .navbar .nav-links .menus li:hover > .waves span {
+    display: inline-block;
+    animation: animate 1s ease-in-out none;
+    animation-delay: calc(0.1s * var(--spell));
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+    20% {
+      transform: translateY(-9.5678px);
+      opacity: 0;
+    }
+    40% {
+      transform: translateY(9.5678px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  /* Book Now Button */
+  .book-now {
+    background-color: gold; /* Solid background color */
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    animation: blink 1.5s infinite;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: inline-block;
+    background-image: none; /* Remove any inherited background images */
+    background-clip: border-box; /* Ensures the background is not transparent */
+    border: 2px solid gold; /* Adds a border to clearly define the button */
+  }
+  
+  /* Blinking effect */
+  @keyframes blink {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0.5;
+    }
+  }
+  
+  /* Magnifying effect on hover */
+  .book-now:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.6); /* Soft glow effect */
+  }
+  
+  /* Dropdown menu */
+  .nav-links .dropdown {
+    position: relative;
+  }
+  
+  .nav-links .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    min-width: 200px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    z-index: 1;
+    top: 100%; /* Place the dropdown below the Menu link */
+    left: 0; /* Align with the Menu link */
+  }
+  
+  .nav-links .dropdown .dropdown-content li {
+    list-style: none;
+  }
+  
+  .nav-links .dropdown .dropdown-content li a {
+    color: var(--clr-white);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .nav-links .dropdown .dropdown-content li a:hover {
+    background-color: #333; /* Change hover color as needed */
+  }
+  
+  /* Show the dropdown menu on hover (desktop) */
+  .nav-links .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Sidebar Logo for Mobile */
+  .sidebar-logo {
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--clr-white);
+  }
+  
+  .close-icon {
+    font-size: 1.8rem; /* Adjust size as needed */
+    cursor: pointer;
+    color: var(--clr-white);
+  }
+  
+  /* Navbar Media Queries */
+  @media (max-width: 888px) {
+    /* Show the hamburger menu icon */
+    .menu-icon {
+      display: block;
+      position: absolute;
+      right: 25px; /* Adjust as needed */
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1100; /* Ensure it's above other elements */
+    }
+  
+    /* Hide navigation links by default */
+    nav .navbar .nav-links {
+      position: fixed;
+      background: var(--clr-black);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      top: 0;
+      left: -100%;
+      max-width: 270px;
+      width: 100%;
+      height: 100vh; /* Full height for mobile menu */
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 70px; /* Space for the navbar */
+      transition: left 0.3s ease-in;
+      z-index: 1001;
+    }
+  
+    /* When nav is active, slide it into view */
+    nav .navbar .nav-links.active {
+      left: 0;
+    }
+  
+    /* Display sidebar logo and close icon */
+    .sidebar-logo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    /* Adjust menus for mobile */
+    nav .navbar .nav-links .menus {
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+  
+    nav .navbar .nav-links .menus li {
+      width: 100%;
+      padding: 10px 20px;
+    }
+  
+    nav .navbar .nav-links .menus li a {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .book-now {
+      display: block;
+      margin: 20px 0;
+      text-align: center;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    /* Dropdown for Mobile */
+    .nav-links .dropdown .dropdown-content {
+      position: relative;
+      box-shadow: none;
+      min-width: 100%;
+      background-color: var(--clr-black);
+    }
+  
+    .nav-links .dropdown.active .dropdown-content {
+      display: block;
+    }
+  
+    /* Hide dropdown content by default on mobile */
+    .nav-links .dropdown .dropdown-content {
+      display: none;
+    }
+  
+    /* Adjust dropdown links */
+    .nav-links .dropdown .dropdown-content li a {
+      color: var(--clr-white);
+      padding: 12px 20px;
+    }
+  
+    /* Ensure dropdown items are visible when active */
+    .nav-links .dropdown.active .dropdown-content {
+      display: block;
+    }
+  }
+  
